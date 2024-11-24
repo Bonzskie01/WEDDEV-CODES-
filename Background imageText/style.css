@@ -1,0 +1,9 @@
+.Burn {
+    text-align: center;
+    background-image: url(flame.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
