@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simulation Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Condiment&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <style>
+        body {
+            font-family: 'Arial';
+        }
+        .logo {
+            font-family: 'Condiment', cursive;
+        }
+        #backToTop {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for the width of the button */
+            background-color: #4B164C; /* A custom color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+
+        #backToTop:hover {
+            background-color: #DD88CF; /* Lighter shade */
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- <header class="absolute w-full py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-3xl font-bold logo">PN</div>
+            <nav class="space-x-4 text-white">
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Contents</a>
+                <a href="#" class="hover:underline">About</a>
+                <a href="#" class="hover:underline">Reporter</a>
+            </nav>
+        </div>
+    </header> -->
+    <main class="relative">
+        <img 
+            src="https://storage.googleapis.com/a1aa/image/KIdSWIhmJyqjo10dwhFCaiiLCyo5qfB4OiF1EXJAx6Y.jpg" 
+            alt="Two people working on a computer with simulation software" 
+            class="w-full h-screen object-cover opacity-20" 
+            width="1920" 
+            height="1080"
+        />
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold" data-aos="fade-up">Simulation Software:</h1>
+            <h2 class="text-3xl md:text-5xl font-bold" data-aos="fade-up" data-aos-delay="100">In-Depth Analysis</h2>
+            <h2 class="text-3xl md:text-5xl font-bold" data-aos="fade-up" data-aos-delay="200">and Applications</h2>
+            <p class="text-xl md:text-2xl mt-4" data-aos="fade-up" data-aos-delay="300">By: Group 4 <br> STEM 12 <br> BENDIXSON</p>
+            <a href="#contents" class="mt-4 inline-block bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition duration-300">Start</a>
+            <button id="backToTop" class="hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-lg">
+                Back to Top
+            </button>           
+        </div> 
+    </main>
+    
+    <!-- Contents Section -->
+    <div id="contents" class="bg-[#4B164C] w-full py-4 text-center">
+        <h1 class="text-center text-white text-2xl font-bold">CONTENTS</h1>
+    </div>
+    
+    <!-- PINK BG COLOR -->
+    <div class="bg-[#DD88CF] w-full py-4">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> 
+                <div>
+                    <br>
+                    <ol class="list-decimal list-inside text-lg">
+                        <li class="mb-4" data-aos="fade-right">
+                            <a href="#"> <strong>Introduction to Simulation Software</strong></a>
+                            <p class="ml-6">- Simulation software creates a virtual model that imitates real-world systems.</p>
+                        </li>
+                        <li class="mb-4" data-aos="fade-right" data-aos-delay="100">
+                            <span><strong>Evolution and History of Simulation Software</strong></span>
+                            <p class="ml-6">- Development of different simulation software.</p>
+                        </li>
+                        <li class="mb-4" data-aos="fade-right" data-aos-delay="200">
+                            <span><strong>Applications</strong></span>
+                            <p class="ml-6">- Modeling, testing, optimization, and risk analysis.</p>
+                        </li>
+                        <li class="mb-4" data-aos="fade-right" data-aos-delay="300">
+                            <span><strong>Popular Software</strong></span>
+                            <p class="ml-6">- MATLAB, ANSYS, Arena, and Simul8.</p>
+                        </li>
+                        <li class="mb-4" data-aos="fade-right" data-aos-delay="400">
+                            <span><strong>MATLAB/Simulink for Simulation</strong></span>
+                            <p class="ml-6">- Features and applications of MATLAB/Simulink.</p>
+                        </li>
+                        <li class="mb-4" data-aos="fade-right" data-aos-delay="500">
+                            <span><strong>AnyLogic for Simulation</strong></span>
+                            <p class="ml-6">- Features and applications of AnyLogic.</p>
+                        </li>
+                        <li class="mb-4" data-aos="fade-right" data-aos-delay="600">
+                            <span><strong>Conclusion and Key Takeaways</strong></span>
+                            <p class="ml-6">- Summary of the impact and future of simulation software.</p>
+                        </li>
+                        <li class="mb-4" data-aos="fade-right" data-aos-delay="700">
+                            <span><strong>References</strong></span>
+                        </li>
+                    </ol>
+                </div>
+                <!-- IMAGES  -->
+                <div class="space-y-4 flex justify-center">
+                    <img alt="Person using advanced simulation equipment" class="rounded-lg shadow-lg" height="400" src="https://images.pexels.com/photos/19997977/pexels-photo-19997977.jpeg" width="600"/>                
+                </div>                
+            </div>
+            <br>
+        </div>
+    
+        <!-- Introduction to Simulation Software Section -->
+        <br>
+            <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+                <h2 class="text-xl font-bold">INTRODUCTION TO SIMULATION SOFTWARE SECTION</h2>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black flex items-center" data-aos="fade-up">
+                <div class="flex-1">
+                    <h3 class="font-bold" style="font-size: 30px;">Definition:</h3>
+                    <p style="font-size: 20px;">Simulation software creates a virtual model that imitates real-world systems, allowing analysis, prediction, and optimization.</p>
+                    
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">How It Works:</h3>
+                    <ul class="list-disc list-inside ml-4">
+                        <li style="font-size: 20px;">Defines a system's rules, variables, and constraints.</li>
+                        <li style="font-size: 20px;">Simulates system behavior over time using mathematical models.</li>
+                        <li style="font-size: 20px;">Evaluates different scenarios to determine optimal outcomes.</li>
+                    </ul>
+                    
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">Importance:</h3>
+                    <ul class="list-disc list-inside ml-4">
+                        <li style="font-size: 20px;">Risk Mitigation</li>
+                        <li style="font-size: 20px;">Process Optimization</li>
+                        <li style="font-size: 20px;">Cost Savings</li>
+                        <li style="font-size: 20px;">Training and Skill Development</li>
+                    </ul>
+                </div>
+            <div class="ml-6">
+                <img src="Images/simulation.jpg" alt="Simulation Image" class="rounded-lg" height="400" width="600">
+            </div>
+        </div>
+              
+        <!-- Evolution and History of Simulation Software -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold">EVOLUTION AND HISTORY OF SIMULATION SOFTWARE</h2>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black" data-aos="fade-up">
+            
+            <!-- Flex container for the content and images -->
+            <div class="flex flex-wrap items-start mt-4">
+                <!-- Left side: Text content -->
+                <div class="flex-1">
+                    <h3 class="font-bold mt-4" style="font-size: 30px;">1. Early Origins (1940s–1950s):</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Monte Carlo method by Stanislaw Ulam and John von Neumann.</li>
+                        <br>
+                        <br>
+                    </ul>
+        
+                    <h3 class="font-bold mt-4" style="font-size: 30px;">2. The 1960s:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Discrete Event Simulation (DES) formalized by Gordon and Newell.</li>
+                        <li style="font-size: 20px;">Simula developed by Ole-Johan Dahl and Kristen Nygaard.</li>
+                        <br>
+                        <br>
+                    </ul>
+        
+                    <h3 class="font-bold mt-4" style="font-size: 30px;">3. The 1970s–1980s:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Rise of commercial software like SIMSCRIPT.</li>
+                        <br>
+                        <br>
+                    </ul>
+        
+                    <h3 class="font-bold mt-4" style="font-size: 30px;">4. 1990s:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Growth of ANSYS, MATLAB/Simulink, and Arena.</li>
+                        <br>
+                        <br>
+                    </ul>
+        
+                    <h3 class="font-bold mt-4" style="font-size: 30px;">5. 2000s–Present:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">AI, digital twins, and cloud platforms revolutionizing simulations.</li>
+                        <br>
+                        <br>
+                    </ul>
+                </div>
+                
+                <!-- Right side: Images with names under each -->
+                <div class="grid grid-cols-3 gap-6 ml-6 w-1/2">
+                    <div class="text-center" data-aos="fade-up">
+                        <img src="Images/Stanislaw Ulam.jpg" alt="Image 1" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">Stanislaw Ulam</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <img src="Images/John von Neumann.jpg" alt="Image 2" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">John von Neumann</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="Images/Gordon, W. J.jpg" alt="Image 3" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">Gordon William John</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <img src="Images/Ole-Johan Dahl.jpg" alt="Image 4" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">Ole-Johan Dahl</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                        <img src="Images/Kristen Nygaard..jpg" alt="Image 5" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">Kristen Nygaard</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                        <img src="Images/SIMSCRIPT.jpg" alt="Image 6" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">SIMSCRIPT</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                        <img src="Images/ANSYS.jpg" alt="Image 7" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">ANSYS</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="700">
+                        <img src="Images/MATLAB.jpg" alt="Image 8" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">MATLAB</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800">
+                        <img src="Images/Arena.png" alt="Image 9" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">Arena</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="900">
+                        <img src="Images/ai.jpg" alt="Image 10" class="rounded-lg mx-auto" style="height: 100px; width: 100px;">
+                        <p class="mt-2">A.I</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <!-- Core Functions of Simulation Software -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold text-white">CORE FUNCTIONS OF SIMULATION SOFTWARE</h2>
+        </div>
+        
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black">
+            <!-- Modeling and Design Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right">
+                <div class="mr-6">
+                    <img src="Images/model.jpg" alt="Modeling and Design" class="w-50 h-40 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <li class="font-bold" style="font-size: 30px;">Modeling and Design:</li>
+                    <ul>
+                        <li style="font-size: 20px;">Creates 3D models and simulates real-world systems.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Testing and Validation Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="100">
+                <div class="mr-6">
+                    <img src="Images/test.jpg" alt="Testing and Validation" class="w-50 h-40 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <li class="font-bold mt-2" style="font-size: 30px;">Testing and Validation:</li>
+                    <ul>
+                        <li style="font-size: 20px;">Analyzes system performance under different conditions.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Process Optimization Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="200">
+                <div class="mr-6">
+                    <img src="Images/quality.jpg" alt="Process Optimization" class="w-50 h-40 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <li class="font-bold mt-2" style="font-size: 30px;">Process Optimization:</li>
+                    <ul>
+                        <li style="font-size: 20px;">Improves efficiency and minimizes waste.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Decision Support Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="300">
+                <div class="mr-6">
+                    <img src="Images/dis.jpg" alt="Decision Support" class="w-50 h-40 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <li class="font-bold mt-2" style="font-size: 30px;">Decision Support:</li>
+                    <ul>
+                        <li style="font-size: 20px;">Provides predictive insights for better decision-making.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Scenario and Risk Analysis Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="400">
+                <div class="mr-6">
+                    <img src="Images/risk.jpg" alt="Scenario and Risk Analysis" class="w-50 h-40 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <li class="font-bold mt-2" style="font-size: 30px;">Scenario and Risk Analysis:</li>
+                    <ul>
+                        <li style="font-size: 20px;">Tests multiple outcomes to mitigate risks.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Applications -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold text-white">APPLICATIONS</h2>
+        </div>
+        
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black">
+            <!-- Engineering and Manufacturing Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right">
+                <div class="mr-6">
+                    <img src="Images/engr. and manuc..jpg" alt="Engineering and Manufacturing" class="w-41 h-32 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <h3 class="font-bold" style="font-size: 30px;">Engineering and Manufacturing:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Product design, control systems, and process optimization.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Healthcare and Medicine Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="100">
+                <div class="mr-6">
+                    <img src="Images/healthcare.jpg" alt="Healthcare and Medicine" class="w-50 h-32 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">Healthcare and Medicine:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Patient treatment simulations, surgical training.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Business and Finance Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="200">
+                <div class="mr-6">
+                    <img src="Images/buss.jpg" alt="Business and Finance" class="w-50 h-32 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">Business and Finance:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Supply chain optimization, financial risk modeling.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Transportation and Logistics Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="300">
+                <div class="mr-6">
+                    <img src="Images/trans.jpg" alt="Transportation and Logistics" class="w-50 h-32 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">Transportation and Logistics:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Traffic simulation, fleet management.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Education and Research Section -->
+            <div class="flex items-center mb-6" data-aos="fade-right" data-aos-delay="400">
+                <div class="mr-6">
+                    <img src="Images/educational-research.jpg" alt="Education and Research" class="w-50 h-32 object-cover rounded-lg mx-auto">
+                </div>
+                <div>
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">Education and Research:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">STEM training and scientific modeling.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Popular Software -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold">POPULAR SOFTWARE</h2>
+        </div>
+        <br>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg height-200 width-200 text-black" data-aos="fade-up">
+            <p style="font-size: 20px;">Some of the most commonly used simulation software includes <strong>MATLAB, ANSYS, Arena, and Simul8</strong>.</p>
+            
+            <!-- Flexbox container for images -->
+            <div class="flex justify-center space-x-6 mt-4">
+                <!-- ANSYS Image -->
+                <div class="text-center" data-aos="fade-right">
+                    <img src="Images/ANSYS.jpg" alt="ANSYS" class="max-w-xs h-auto rounded-lg mx-auto">
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">1. ANSYS:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Finite element analysis (FEA) and fluid dynamics.</li>
+                        <li style="font-size: 20px;">Applications: Aerospace, automotive, and energy sectors.</li>
+                    </ul>
+                </div>
+                
+                <!-- MATLAB/Simulink Image -->
+                <div class="text-center" data-aos="fade-right" data-aos-delay="100">
+                    <img src="Images/MATLAB.jpg" alt="MATLAB/Simulink" class="max-w-xs h-auto rounded-lg mx-auto">
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">2. MATLAB/Simulink:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Control system modeling and signal processing.</li>
+                        <li style="font-size: 20px;">Applications:</li>
+                        <ul>
+                            <li style="font-size: 20px;">Robotics, telecommunications, and embedded systems.</li>
+                        </ul>
+                    </ul>
+                </div>
+        
+                <!-- Simul8 Image -->
+                <div class="text-center" data-aos="fade-right" data-aos-delay="200">
+                    <img src="Images/simul8.jpg" alt="Simul8" class="max-w-xs h-auto rounded-lg mx-auto">
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">3. Simul8:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Business process simulation.</li>
+                        <li style="font-size: 20px;">Applications:</li>
+                        <ul>
+                            <li style="font-size: 20px;">Manufacturing and supply chain management.</li>
+                        </ul>
+                    </ul>
+                </div>
+        
+                <!-- Arena Image -->
+                <div class="text-center" data-aos="fade-right" data-aos-delay="300">
+                    <img src="Images/Arena.png" alt="Arena" class="max-w-xs h-auto rounded-lg mx-auto">
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">4. Arena:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Discrete event simulation for business operations.</li>
+                        <li style="font-size: 20px;">Applications:</li>
+                        <ul>
+                            <li style="font-size: 20px;">Healthcare, manufacturing, and services.</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- MATLAB/Simulink for Simulation -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold">MATLAB/SIMULINK FOR SIMULATION</h2>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black" data-aos="fade-up">
+            <div class="flex items-center">
+                <!-- Left side: Text content -->
+                <div class="flex-1">
+                    <h3 class="font-bold" style="font-size: 30px;">Features:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Simulates complex control systems.</li>
+                        <li style="font-size: 20px;">Models multi-domain physical systems.</li>
+                        <li style="font-size: 20px;">Offers integration with hardware for real-time testing.</li>
+                    </ul>
+        
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">Applications:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Automotive control systems.</li>
+                        <li style="font-size: 20px;">Aerospace navigation and control systems.</li>
+                        <li style="font-size: 20px;">Robotics and IoT device modeling.</li>
+                    </ul>
+        
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">MATLAB/Simulink – Shortcuts and Tips</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Ctrl + N: Create a new model.</li>
+                        <li style="font-size: 20px;">Ctrl + S: Save the model.</li>
+                        <li style="font-size: 20px;">Ctrl + R: Rotate selected block.</li>
+                        <li style="font-size: 20px;">Ctrl + Z: Undo previous action.</li>
+                    </ul>
+                </div>
+        
+                <!-- Right side: Image -->
+                <div class="ml-6">
+                    <img src="Images/matlab.png" alt="MATLAB/Simulink Image" class="rounded-lg" height="400" width="650">
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- AnyLogic for Simulation -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold">ANYLOGIC FOR SIMULATION</h2>
+        </div>
+        
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black" data-aos="fade-up">
+            <div class="flex items-center">
+                <!-- Left side: Image -->
+                <div class="mr-6">
+                    <img src="Images/anylogic.jpg" alt="AnyLogic Image" class="rounded-lg">
+                </div>
+        
+                <!-- Right side: Text content -->
+                <div class="flex-1">
+                    <h3 class="font-bold" style="font-size: 30px;">Features:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Supports discrete event, agent-based, and system dynamics models.</li>
+                        <li style="font-size: 20px;">Allows multimethod modeling for complex systems.</li>
+                        <li style="font-size: 20px;">Integrates with Java for enhanced functionality.</li>
+                    </ul>
+        
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">Applications:</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Supply chain and logistics optimization.</li>
+                        <li style="font-size: 20px;">Healthcare system simulations.</li>
+                        <li style="font-size: 20px;">Manufacturing process improvement.</li>
+                    </ul>
+        
+                    <h3 class="font-bold mt-2" style="font-size: 30px;">AnyLogic – Shortcuts and Tips</h3>
+                    <ul>
+                        <li style="font-size: 20px;">Ctrl + N: Create a new model.</li>
+                        <li style="font-size: 20px;">Ctrl + S: Save the model.</li>
+                        <li style="font-size: 20px;">Ctrl + Space: Auto-complete Java code.</li>
+                        <li style="font-size: 20px;">Ctrl + Shift + I: Inspect model elements.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Conclusion and Key Takeaways -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold">CONCLUSION AND TAKEAWAYS</h2>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black" data-aos="fade-up">
+            <div class="flex items-center">
+                <!-- Left side: Text content -->
+                <div class="flex-1">
+                    <ul>
+                        <li style="font-size: 30px;"> <strong>Simulation software revolutionizes</strong> industries by reducing costs, improving efficiency, and enhancing decision-making.</li>
+                        <li style="font-size: 30px;">Continuous advancements in AI, cloud computing, and digital twins will further expand the possibilities of simulation.</li>
+                        <li style="font-size: 30px;">Investing in simulation technology ensures innovation, safety, and operational excellence.</li>
+                    </ul>
+                </div>
+        
+                <!-- Right side: Image -->
+                <div class="ml-6">
+                    <img src="Images/conclusion.png" alt="Simulation Image" class="max-w-xs h-auto rounded-lg">
+                </div>
+            </div>
+        </div>        
+
+        <!-- References -->
+        <br>
+        <div class="bg-[#4B164C] w-full py-4 text-center" data-aos="fade-up">
+            <h2 class="text-xl font-bold">REFERENCES</h2>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-7xl mx-auto mt-4 text-black flex items-center" data-aos="fade-up">
+            <div class="flex-1">
+                <ul>
+                    <li style="font-size: 30px;"><strong>MATLAB/Simulink official documentation.</strong></li>
+                    <li style="font-size: 30px;"><strong>ANSYS and Simul8 user manuals.</strong></li>
+                    <li style="font-size: 30px;"><strong>AnyLogic official guide.</strong></li>
+                    <li style="font-size: 30px;"><strong>Academic papers on simulation technologies and history.</strong></li>
+                </ul>
+            </div>
+            <div class="ml-6">
+                <img src="Images/references.png" alt="Simulation Image" class="max-w-xs h-auto rounded-lg">
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            easing: 'ease-in-out', // Easing function
+        });
+
+        // Get the button element
+        const backToTop = document.getElementById("backToTop");
+
+        // Show the button when scrolling past a certain point
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+
+        // Scroll smoothly to the top when the button is clicked
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>
